@@ -1,0 +1,9 @@
+<h3>You might also like this....</h3>
+<ul>
+  <% @recommendations.each do |shirt| %>
+    <li>
+      <p><%= shirt.name %></p>
+      <%= image_tag shirt.image_url, class: 'img-responsive' %>
+    </li>
+  <% end %>
+</ul>
