@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
 
-gem "pry"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 
 gem 'sidekiq'
@@ -50,6 +47,27 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'pry-rails'
+end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'factory_girl_rails'
+  gem 'simplecov'
+  gem 'database_cleaner'
+  gem 'sqlite3'
+  gem 'pry'
+  gem 'guard-rspec', require: false
+  gem 'thin'
+end
+
+group :production do
+  gem 'pg'
+  gem 'google-analytics-rails'
+  gem 'rails_12factor'
 end
 
 # For the pretties
