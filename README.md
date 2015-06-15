@@ -2,6 +2,8 @@
 
 ShirtHub is a recommendation engine built on top of a Rails app used to track our instructor's tee-shirt collection. Proof-of-concept project to demonstrate the implementation of artificial intelligence principles.
 
+The different branches represent different jQuery styling for the splash page.
+
 ## Features
 
 - Stored user and shirt data using SQLite
