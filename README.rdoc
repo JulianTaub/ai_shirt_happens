@@ -1,28 +1,36 @@
-== README
+# ShirtHub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ShirtHub is a recommendation engine built on top of a Rails app used to track our instructor's tee-shirt collection. Proof-of-concept project to demonstrate the implementation of artificial intelligence principles.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- Stored user and shirt data using SQLite
+- Populated database with random users, each with a random collection of shirts
+- Implemented Recommendable gem to compare users and suggest shirts based on those similarities 
+- Evaluated and stored user set similarities with Redis
+- Handled simultaneous queries to Redis using Sidekiq gem
+- Asynchronous loading and parallax using AJAX and jQuery
 
-* System dependencies
+## Dependancies
 
-* Configuration
+**Gems**
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- sidekiq
+- recommendable
+- redis (in recommendable.rb initializer file)
+- sqlite (development)
+- pg (production)
+- jquery-rails
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Authors
+
+Built by Julian Taub and Lucy Orbach in May 2015
+
+## Credit 
+
+Our instructor Ben Gross for his support. Steven Nunez for permission to build on his shirt app.
+
+## License
+
+ShirtHub is MIT Licensed. See LICENSE for details.
