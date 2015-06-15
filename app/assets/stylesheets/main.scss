@@ -203,7 +203,26 @@ header {
 			transform: skew(-90deg, 0deg);
 			@include transition();
 		}
+		&.square {
+			width: 40%;
+			margin: 100px auto;
+			border-image: url("redframe.png") 10 10 10 10 repeat stretch;
+			.row {
+				width: 80%;
+				overflow: hidden;
+			}
+			li {
+				margin: 10px 0px; 
+			}
+			.redbtn {
+				margin: 30px auto;
+				float: none;
+				font-size: 3rem;
+				height: 50px;
+			}
+		}
 	}//banner
+
 //===========================
 // MAIN
 //===========================

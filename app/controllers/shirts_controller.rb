@@ -1,5 +1,5 @@
 class ShirtsController < ApplicationController
-  skip_before_action :authenticate!, only: [:index, :show]
+  skip_before_action :authenticate!, only: [:index]
   def index
     @shirts = Shirt.all
   end

@@ -1,25 +1,21 @@
 <% if @user.errors.any? %>
-<ul>
+<ul class="views">
   <% @user.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
+    <li class="error"><%= error %></li>
   <% end %>
 </ul>
 <% end %>
-<h1>Sign up!</h1>
-<h2>Sometimes shirt happens</h2>
-
+<section class="banner square">
+  <h1>Sign in!</h1>
+  <h2>Great things await!</h2>
 <%= form_for @user, url: sign_up_path do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <%= f.submit "Create your account!" %>
+  <ul class="row forms">
+    <li class="col-md-4"><%= f.label :email %></li>
+    <li class="col-md-8"><%= f.email_field :email %></li>
+    <li class="col-md-4"><%= f.label :password %></li>
+    <li class="col-md-8"><%= f.password_field :password %></li>
+    <li class="col-md-4"><%= f.label :password_confirmation %></li>
+    <li class="col-md-8"><%= f.password_field :password_confirmation %></li>
+    </ul>
+  <%= f.submit "Create your account!", class: :redbtn %>
 <% end %>

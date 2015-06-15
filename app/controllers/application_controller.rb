@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate!
-    redirect_to root_path, notice: "You must be logged in to do that" unless logged_in?
+    redirect_to sign_in_path, notice: "You must be logged in to do that" unless logged_in?
   end
 end
